@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NobelPrizeWinners.App", "NobelPrizeWinners.App\NobelPrizeWinners.App.csproj", "{DBBEA5DD-2514-4A6A-9EFB-5187A4A45920}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NobelPrizeWinners.App", "NobelPrizeWinners.App\NobelPrizeWinners.App.csproj", "{DBBEA5DD-2514-4A6A-9EFB-5187A4A45920}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NobelPrizeWinners.Data", "NobelPrizeWinners.Data\NobelPrizeWinners.Data.csproj", "{FA6F5148-C76A-42B6-A4D2-848730F1DBD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NobelPrizeWinners.Models", "NobelPrizeWinners.Models\NobelPrizeWinners.Models.csproj", "{4988465E-198E-43C7-97B9-2DE58FDC9DC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NobelPrizeWinners.Services", "NobelPrizeWinners.Services\NobelPrizeWinners.Services.csproj", "{A4765D08-3873-4728-B84A-465AD80740A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{DBBEA5DD-2514-4A6A-9EFB-5187A4A45920}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBBEA5DD-2514-4A6A-9EFB-5187A4A45920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBBEA5DD-2514-4A6A-9EFB-5187A4A45920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA6F5148-C76A-42B6-A4D2-848730F1DBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6F5148-C76A-42B6-A4D2-848730F1DBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6F5148-C76A-42B6-A4D2-848730F1DBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6F5148-C76A-42B6-A4D2-848730F1DBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4988465E-198E-43C7-97B9-2DE58FDC9DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4988465E-198E-43C7-97B9-2DE58FDC9DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4988465E-198E-43C7-97B9-2DE58FDC9DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4988465E-198E-43C7-97B9-2DE58FDC9DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4765D08-3873-4728-B84A-465AD80740A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4765D08-3873-4728-B84A-465AD80740A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4765D08-3873-4728-B84A-465AD80740A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4765D08-3873-4728-B84A-465AD80740A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
