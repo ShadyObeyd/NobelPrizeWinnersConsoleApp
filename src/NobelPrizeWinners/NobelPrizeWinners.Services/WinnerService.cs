@@ -11,6 +11,9 @@
     {
         private readonly NobelPrizeWinnersDbContext db;
 
+        private const char Separator = '|';
+        private const string FilePath = @""; // <-- Add file path
+
         public WinnerService(NobelPrizeWinnersDbContext db)
         {
             this.db = db;
@@ -18,9 +21,7 @@
 
         public void PopulateDatabase()
         {
-            string filePath = @"C:\Users\Shadi Obeid\Desktop\Nobel Prize Winners.xlsx"; // <-- Add file path
-
-            FileInfo file = new FileInfo(filePath);
+            FileInfo file = new FileInfo(FilePath);
 
             using (ExcelPackage package = new ExcelPackage(file))
             {
@@ -28,7 +29,7 @@
                 int rowsCount = worksheet.Dimension.Rows;
                 int colsCount = worksheet.Dimension.Columns;
 
-                for (int row = 1; row <= rowsCount; row++)
+                for (int row = 2; row <= rowsCount; row++)
                 {
                     string rawText = string.Empty;
 
@@ -36,14 +37,14 @@
                     {
                         try
                         {
-                            rawText += worksheet.Cells[row, col].Value.ToString() + "@";
+                            rawText += worksheet.Cells[row, col].Value.ToString() + Separator;
                         }
                         catch (NullReferenceException)
                         {
-                            rawText += "N/A@";
+                            rawText += $"N/A{Separator}";
                         }
                     }
-                    string[] winnerTokens = rawText.Split('@').Select(x => x.Trim()).ToArray();
+                    string[] winnerTokens = rawText.Split(Separator, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim()).ToArray();
 
                     string year = winnerTokens[0];
                     string category = winnerTokens[1];
