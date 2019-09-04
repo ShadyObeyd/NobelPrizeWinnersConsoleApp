@@ -14,12 +14,22 @@
         private const char Separator = '|';
         private const string FilePath = @""; // <-- Add file path
 
+        private const string WaitMessage = "Please wait...";
+        private const string DoneMessage = "Done! Have a nice day!";
+
         public WinnerService(NobelPrizeWinnersDbContext db)
         {
             this.db = db;
         }
 
-        public void PopulateDatabase()
+        public void Run()
+        {
+            Console.WriteLine(WaitMessage);
+            this.PopulateDatabase();
+            Console.WriteLine(DoneMessage);
+        }
+
+        private void PopulateDatabase()
         {
             FileInfo file = new FileInfo(FilePath);
 
